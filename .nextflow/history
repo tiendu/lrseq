@@ -1,3 +1,6 @@
 2023-12-29 12:14:40	4.2s	nauseous_venter	ERR	1e446260e4aca3b75a29e11a8f62c3d0	11bd983e-b405-48a3-8d8a-ae4ab872567b	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
 2023-12-29 12:21:56	-	nasty_stone	-	1e446260e4aca3b75a29e11a8f62c3d0	7186f360-1070-4742-bdcd-8aaec0a259c3	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
 2023-12-29 12:22:24	-	prickly_ardinghelli	-	1e446260e4aca3b75a29e11a8f62c3d0	b7ccd6ee-1065-4dcf-be52-559874265598	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
+2023-12-29 12:34:39	-	cranky_cori	-	1e446260e4aca3b75a29e11a8f62c3d0	72c26e43-d284-40b9-8827-418439564207	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
+2023-12-29 13:00:50	-	cranky_einstein	-	1e446260e4aca3b75a29e11a8f62c3d0	227fde4d-69a7-48b2-b4f1-f1a137dc80cb	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
+2023-12-29 13:02:06	-	nostalgic_dalembert	-	1e446260e4aca3b75a29e11a8f62c3d0	1cbc0fcf-8598-4efe-8fe9-7b1c65d583d8	nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results

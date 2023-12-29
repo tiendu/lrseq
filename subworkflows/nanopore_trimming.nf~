@@ -15,5 +15,5 @@ workflow NANOPORE_TRIMMING {
 
     emit:
     fastq
-    version
+    versions
 }
