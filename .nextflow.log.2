@@ -1,0 +1,86 @@
+Dec-29 12:21:54.430 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input /home/tien/pipelines/lrseq/samplesheet.csv --outdir results
+Dec-29 12:21:54.546 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-29 12:21:54.574 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/tien/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-29 12:21:54.588 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-29 12:21:54.589 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-29 12:21:54.593 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-29 12:21:54.610 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-29 12:21:54.638 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/tien/pipelines/lrseq/nextflow.config
+Dec-29 12:21:54.640 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/tien/pipelines/lrseq/nextflow.config
+Dec-29 12:21:54.681 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-29 12:21:55.999 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Dec-29 12:21:56.021 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [nasty_stone] DSL2 - revision: 1e446260e4
+Dec-29 12:21:56.022 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-29 12:21:56.023 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-29 12:21:56.038 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/tien/.nextflow/secrets/store.json
+Dec-29 12:21:56.044 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@43bf5397] - activable => nextflow.secret.LocalSecretsProvider@43bf5397
+Dec-29 12:21:56.127 [main] DEBUG nextflow.Session - Session UUID: 7186f360-1070-4742-bdcd-8aaec0a259c3
+Dec-29 12:21:56.127 [main] DEBUG nextflow.Session - Run name: nasty_stone
+Dec-29 12:21:56.128 [main] DEBUG nextflow.Session - Executor pool size: 16
+Dec-29 12:21:56.140 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-29 12:21:56.148 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-29 12:21:56.181 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (22:07 ICST)
+  System: Linux 6.2.0-39-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 20.0.2-internal-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 86651@thinkpad [127.0.1.1]
+  CPUs: 16 - Mem: 46.3 GB (40.3 GB) - Swap: 2 GB (2 GB)
+Dec-29 12:21:56.214 [main] DEBUG nextflow.Session - Work-dir: /home/tien/pipelines/lrseq/work [ext2/ext3]
+Dec-29 12:21:56.245 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-29 12:21:56.261 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-29 12:21:56.296 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-29 12:21:56.310 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Dec-29 12:21:56.398 [main] DEBUG nextflow.Session - Session start
+Dec-29 12:21:56.547 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-29 12:21:57.249 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_3f148bdcd684b304: /home/tien/pipelines/lrseq/./workflows/../subworkflows/../modules/nanoplot.nf
+  Script_1e0cd697b8ddf195: /home/tien/pipelines/lrseq/./workflows/../subworkflows/input_check.nf
+  Script_35a6729c928e5d42: /home/tien/pipelines/lrseq/./workflows/../subworkflows/../modules/fastqc.nf
+  Script_427d4fd1e8ca3766: /home/tien/pipelines/lrseq/./workflows/../subworkflows/../modules/samplesheet_check.nf
+  Script_3f13060648a0794e: /home/tien/pipelines/lrseq/./workflows/../subworkflows/qcfastq_nanoplot_fastqc.nf
+  Script_fb8903a8d35a34b3: /home/tien/pipelines/lrseq/main.nf
+  Script_516248c463b16bd0: /home/tien/pipelines/lrseq/./workflows/nanoseq.nf
+Dec-29 12:21:57.260 [main] ERROR nextflow.cli.Launcher - Include '../subworkflows/' does not provide any module script -- the following path should contain a 'main.nf' script: '/home/tien/pipelines/lrseq/./workflows/../subworkflows'
+nextflow.exception.ScriptCompilationException: Include '../subworkflows/' does not provide any module script -- the following path should contain a 'main.nf' script: '/home/tien/pipelines/lrseq/./workflows/../subworkflows'
+	at nextflow.script.IncludeDef.realModulePath(IncludeDef.groovy:186)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:121)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_516248c463b16bd0.runScript(Script_516248c463b16bd0:3)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:222)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:151)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure2.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:123)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_fb8903a8d35a34b3.runScript(Script_fb8903a8d35a34b3:1)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)

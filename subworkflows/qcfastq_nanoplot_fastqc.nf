@@ -3,11 +3,11 @@ include { FASTQC } from '../modules/fastqc'
 
 workflow QCFASTQ_NANOPLOT_FASTQC {
     take:
-    ch_fastq
+    ch_sample
 
     main:
-    ch_fastq
-        .map { ch -> [ ch[0], ch[1] ] }
+    ch_sample
+        .map { ch -> [ ch[0], ch[2] ] }
         .set { ch_fastq }
 
     // QC using NanoPlot
