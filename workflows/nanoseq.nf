@@ -8,5 +8,5 @@ workflow NANOSEQ {
         .set { ch_sample }
     QCFASTQ_NANOPLOT_FASTQC ( ch_sample )
     NANOPORE_TRIMMING ( ch_sample )
-    FLYE ( NANOPORE_TRIMMING.fastq, params.mode ) 
+    FLYE ( NANOPORE_TRIMMING.out.fastq, params.mode ) 
 }
