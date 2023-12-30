@@ -14,6 +14,8 @@ workflow NANOSEQ {
     mode = "--" + params.mode
     FLYE ( NANOPORE_TRIMMING.out.fastq, mode )
     
+    reference = params.reference ?: ''
+    gff = params.gff ?: ''
     
     QUAST ( FLYE.out.fasta, [], [] )
 }
