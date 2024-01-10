@@ -3,7 +3,7 @@ include { QCFASTQ_NANOPLOT_FASTQC } from '../subworkflows/qcfastq_nanoplot_fastq
 include { NANOPORE_TRIMMING } from '../subworkflows/nanopore_trimming'
 include { FLYE } from '../modules/flye.nf'
 include { MEDAKA } from '../modules/medaka'
-include { QUAST } from '../modules/quast' 
+include { QUAST } from '../modules/quast'
 
 workflow NANOSEQ { 
     INPUT_CHECK ( params.input )
@@ -15,7 +15,7 @@ workflow NANOSEQ {
     mode = "--" + params.mode
     FLYE ( NANOPORE_TRIMMING.out.fastq, mode )
 
-    MEDAKA ( [FLYE.out.fasta[0], NANOPORE_TRIMMING.out.fastq, FLYE.out.fasta[1]] )
+    //MEDAKA ( [FLYE.out.fasta[0], NANOPORE_TRIMMING.out.fastq, FLYE.out.fasta[1]] )
     
     reference = params.reference ?: ''
     gff = params.gff ?: ''
