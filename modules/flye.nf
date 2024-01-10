@@ -3,7 +3,7 @@ process FLYE {
     label 'process_high'
 
     conda "bioconda::flye=2.9"
-    container "biocontainers/flye:2.9--py39h6935b12_1"
+    container "quay.io/biocontainers/flye:2.9--py39h6935b12_1"
 
     input:
     tuple val(meta), path(reads)
