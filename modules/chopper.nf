@@ -3,7 +3,7 @@ process CHOPPER {
     label 'process_medium'
 
     conda "bioconda::chopper=0.3.0"
-    container "biocontainers/chopper:0.3.0--hd03093a_0"
+    container "quay.io/biocontainers/chopper:0.7.0--hdcf5f25_0"
 
     input:
     tuple val(meta), path(fastq)
